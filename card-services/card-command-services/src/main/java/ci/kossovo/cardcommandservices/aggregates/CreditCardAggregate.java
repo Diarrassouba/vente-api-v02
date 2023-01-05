@@ -64,6 +64,7 @@ public class CreditCardAggregate {
       cmd.validUntilMonth(),
       1
     );
+
     log.info("#############################################");
     log.info("La date de validite de la carte est: {}", localDate);
 
@@ -195,7 +196,7 @@ public class CreditCardAggregate {
     this.statut = event.statut();
   }
 
-  // ************* Methodes privees ****************************
+  // ************* Methodes privees ***************
   private int generer(int borneInf, int borneSup) {
     Random random = new Random();
     int nb;
