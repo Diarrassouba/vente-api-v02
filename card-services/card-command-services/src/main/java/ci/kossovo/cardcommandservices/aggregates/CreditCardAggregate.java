@@ -16,7 +16,6 @@ import ci.kossovo.ventecoreapi.events.card.CreditCardDebitedEvent;
 import ci.kossovo.ventecoreapi.events.card.CreditCardDesactivedEvent;
 import ci.kossovo.ventecoreapi.exceptions.card.NotCardValidateException;
 import ci.kossovo.ventecoreapi.exceptions.customers.NotFoundCustomerException;
-
 import java.time.LocalDate;
 import java.util.Random;
 import lombok.Getter;
@@ -35,7 +34,6 @@ public class CreditCardAggregate {
   @AggregateIdentifier
   private String cardCreditId;
 
-  // private String userId;
   private String cardNumber;
   private Integer validUntilMonth;
   private Integer validUntilYear;
@@ -118,7 +116,7 @@ public class CreditCardAggregate {
     this.cvv = event.cvv();
     this.balance = event.balance();
     this.statut = event.statut();
-    this.proprietaire=event.proprietaire();
+    this.proprietaire = event.proprietaire();
     this.ownerNationalCardId = event.ownerNationalCardId();
     this.email = event.email();
     this.quartier = event.quartier();
