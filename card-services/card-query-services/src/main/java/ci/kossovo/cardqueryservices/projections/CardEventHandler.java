@@ -40,8 +40,6 @@ public class CardEventHandler {
       .build();
 
     cardService.saveCard(card);
-    //  catch (DuplicateKeyException e) {
-    //   throw new RuntimeException("Probleme de creation de la carte de credit");
-    // }
+   
   }
 }
