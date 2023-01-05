@@ -15,8 +15,6 @@ public class CardEventHandler {
 
   private final CardService cardService;
 
-  // private final EventGateway eventGateway;
-
   @EventHandler
   public void on(CreditCardCreatedEvent event) {
     log.info("#############################################################");
@@ -40,6 +38,5 @@ public class CardEventHandler {
       .build();
 
     cardService.saveCard(card);
-   
   }
 }
