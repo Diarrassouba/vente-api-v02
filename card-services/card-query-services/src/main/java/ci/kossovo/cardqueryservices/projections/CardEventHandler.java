@@ -4,11 +4,12 @@ import ci.kossovo.cardqueryservices.data.documents.Card;
 import ci.kossovo.cardqueryservices.servicees.CardService;
 import ci.kossovo.ventecoreapi.events.card.CreditCardCreatedEvent;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.stereotype.Component;
 
 @Component
-// @Slf4j
+@Slf4j
 @RequiredArgsConstructor
 public class CardEventHandler {
 
@@ -18,14 +19,8 @@ public class CardEventHandler {
 
   @EventHandler
   public void on(CreditCardCreatedEvent event) {
-    // log.info("#############################################################");
-    // log.info("Le proprietaire de la carte est: {}s", event.userId());
-    // Owner owner = cardService.findByIdOwnwr(event.userId());
-    // String[] cels = owner.getCel().split("-");
-    // String number = cels[0] + "-" + cels[1] + cels[2] + "-" + cels[3] + cels[4];
-
-    // log.info("#############################################################");
-    // log.info("Le numero  de la carte est: {}", number);
+    log.info("#############################################################");
+    log.info("Le numero  de la carte est: {}", event.cardNumber());
     Card card = Card
       .builder()
       .id(event.cardCreditId())
