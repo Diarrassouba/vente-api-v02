@@ -196,7 +196,7 @@ public class CreditCardAggregate {
     this.statut = event.statut();
   }
 
-  // ************* Methodes privees ***************
+  // ************* Methodes privees *********************************
   private int generer(int borneInf, int borneSup) {
     Random random = new Random();
     int nb;
