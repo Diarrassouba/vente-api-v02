@@ -136,7 +136,7 @@ public class CreditCardAggregate {
 
     AggregateLifecycle.apply(event);
   }
-
+// #############################################################
   @EventSourcingHandler
   public void on(CreditCardCreditedEvent event) {
     this.balance = balance + event.amount();
